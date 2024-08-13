@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDC Free Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <header class="header">
+        <h1>EDC Free Solutions</h1>
+        <p>Your guide to safer personal care products</p>
+    </header>
+
+    <div class="container">
+        <form id="edcForm">
+            <div class="form-group">
+                <label for="gender">What is your gender?</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="Male"> Male
+                    <input type="radio" id="female" name="gender" value="Female"> Female
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="age">What is your age?</label>
+                <input type="number" id="age" name="age">
+            </div>
+
+            <div class="form-group">
+                <label for="awareness">Are you aware of the potential risks of endocrine-disrupting chemicals in personal care products?</label>
+                <div class="radio-group">
+                    <input type="radio" id="yes" name="awareness" value="Yes"> Yes
+                    <input type="radio" id="no" name="awareness" value="No"> No
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="ingredients">Check Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" rows="4" cols="50"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="frequency">How frequently do you apply this product?</label>
+                <select id="frequency" name="frequency">
+                    <option value="daily">Daily</option>
+                    <option value="few_times_a_week">A few times a week</option>
+                    <option value="once_a_week">Once a week</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="btn" onclick="checkIngredients()">Check</button>
+                <button type="reset" class="btn secondary">Clear</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>RESULT</h2>
+        <table id="resultTable" class="display">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Reference</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>© 2024 EDC Free Solutions. All rights reserved. Made with <i class="fas fa-heart"></i>.</p>
+    </footer>
+
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
