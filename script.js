@@ -59,4 +59,7 @@ function checkIngredients() {
     } else {
         tableBody.append('<tr><td colspan="3">No harmful ingredients found!</td></tr>');
     }
+            
+    // Scroll to the result section
+    document.getElementById("resultSection").scrollIntoView({ behavior: "smooth" });
 }
