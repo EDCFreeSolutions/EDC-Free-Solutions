@@ -1,16 +1,22 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #f2f4f7;
+    background-color: #c6d6c3;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
 .header {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(180deg, #fdfdfd, #c6d6c3);
     color: white;
     text-align: center;
     padding: 40px 20px;
+}
+
+.image{
+    width: 700px;
+    height: 300px;
+    position: center;
 }
 
 .header h1 {
@@ -18,13 +24,14 @@ body {
     font-size: 3em;
     margin: 0;
     padding-bottom: 10px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    -webkit-text-stroke: 1.5px #333;
 }
 
 .header p {
     font-size: 1.2em;
     margin: 0;
     font-weight: 300;
+    -webkit-text-stroke: 1px #333;
 }
 
 .container {
@@ -88,7 +95,7 @@ textarea {
 
 .btn {
     padding: 12px 25px;
-    background-color: #667eea;
+    background-color: #7067f5;
     color: white;
     border: none;
     border-radius: 5px;
@@ -109,17 +116,18 @@ textarea {
 }
 
 footer {
-    background-color: #764ba2;
+    background-color: #c6d6c3;
     color: white;
     text-align: center;
     padding: 20px 0;
     margin-top: 50px;
-    border-top: 5px solid #667eea;
+    border-top: 5px solid #c6d6c3;
 }
 
 footer p {
     margin: 0;
     font-size: 0.9em;
+    -webkit-text-stroke:1px #333;
 }
 
 footer i {
