@@ -21,40 +21,10 @@
     <div class="container">
         <form id="edcForm">
             <div class="form-group">
-                <label for="gender">Gender:</label>
-                <div class="radio-group">
-                    <input type="radio" id="male" name="gender" value="Male"> Male 
-                    <input type="radio" id="female" name="gender" value="Female"> Female
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age">
-            </div>
-
-            <div class="form-group">
-                <label for="awareness">Are you aware of the potential risks of endocrine-disrupting chemicals in personal care products?</label>
-                <div class="radio-group">
-                    <input type="radio" id="yes" name="awareness" value="Yes"> Yes
-                    <input type="radio" id="no" name="awareness" value="No"> No
-                </div>
-            </div>
-
-            <div class="form-group">
                 <label for="ingredients">Check Ingredients:</label>
                 <textarea id="ingredients" name="ingredients" rows="4" cols="50"></textarea>
             </div>
-
-            <div class="form-group">
-                <label for="frequency">How frequently do you apply this product?</label>
-                <select id="frequency" name="frequency">
-                    <option value="daily">Daily</option>
-                    <option value="few_times_a_week">A few times a week</option>
-                    <option value="once_a_week">Once a week</option>
-                </select>
-            </div>
-
+            
             <div class="button-group">
                 <button type="button" class="btn" onclick="checkIngredients()">Check</button>
                 <button type="reset" class="btn secondary">Clear</button>
