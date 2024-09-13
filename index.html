@@ -8,11 +8,89 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <style>
+        /* Styling the navigation menu */
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            background-color: white; /* Set background color to white */
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid #ddd; /* Add a subtle bottom border */
+        }
+
+        nav a {
+            color: purple; /* Set text color to purple */
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0; /* Light grey hover effect */
+            color: darkviolet; /* Slightly darker purple on hover */
+        }
+
+        /* Body content adjustments */
+        body {
+            margin-top: 50px; /* To make room for the fixed menu */
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* Other existing styles */
+        .header {
+            padding: 20px;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .form-group label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn.secondary {
+            background-color: #6c757d;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+        }
+    </style>
 </head>
 
 <body>
-    
-    <header class="header">
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#header">Ingredient Checker</a>
+        <a href="#aboutSection">About Us</a>
+        <a href="#edcSection">About EDCs</a>
+        <a href="#resultSection">Results</a>
+    </nav>
+
+    <!-- Main Content -->
+    <header class="header" id="header">
         <img class="image" src="img/cc1-removebg-preview.png" alt="chemical compound">
         <h1>EDC Free Solutions</h1>
         <p>Your guide to safer personal care products</p>
@@ -48,11 +126,63 @@
         </table>
     </div>
 
+    <!-- About Us Section -->
+    <div class="container" id="aboutSection">
+        <h2>About Us</h2>
+        <p>
+            At <strong>EDC Free Solutions</strong>, we are committed to helping you make safer choices for your personal care products. 
+            Our mission is to provide a comprehensive database of ingredients used in cosmetics, skincare, and other personal care items 
+            that may pose a risk to your health, particularly due to their potential endocrine-disrupting properties. 
+        </p>
+        <p>
+            Our tool allows you to check whether a product contains harmful chemicals such as parabens, phthalates, or other 
+            endocrine-disrupting chemicals (EDCs). The website is designed to educate consumers about the risks associated with 
+            these chemicals and promote healthier alternatives.
+        </p>
+        <p>
+            We believe in transparency and aim to empower individuals with the knowledge to protect themselves and their loved ones. 
+            Thank you for visiting EDC Free Solutions, and we hope you find our service useful in your journey to safer personal care products.
+        </p>
+    </div>
+
+    <!-- About Endocrine-Disrupting Chemicals Section -->
+    <div class="container" id="edcSection">
+        <h2>About Endocrine-Disrupting Chemicals (EDCs)</h2>
+        <p>
+            Endocrine-disrupting chemicals (EDCs) are substances that interfere with the normal functioning of the endocrine system in both humans and animals. 
+            The endocrine system is responsible for regulating hormones that control many critical functions, including growth, metabolism, reproduction, and 
+            development. EDCs can mimic, block, or interfere with the body's natural hormones, leading to adverse health effects.
+        </p>
+        <p>
+            Exposure to EDCs can occur through various sources such as personal care products, plastics, pesticides, and industrial chemicals. 
+            Some common EDCs found in personal care products include:
+        </p>
+        <ul>
+            <li><strong>Parabens:</strong> Used as preservatives in cosmetics and skincare products.</li>
+            <li><strong>Phthalates:</strong> Used as plasticizers and found in fragrances, nail polish, and hairsprays.</li>
+            <li><strong>Triclosan:</strong> An antimicrobial agent used in soaps, toothpaste, and deodorants.</li>
+            <li><strong>Bisphenol A (BPA):</strong> Found in plastics and used in the manufacturing of packaging and containers.</li>
+            <li><strong>UV Filters:</strong> Chemicals like oxybenzone and octinoxate used in sunscreens.</li>
+        </ul>
+        <p>
+            Continuous exposure to these chemicals, even in small amounts, may contribute to long-term health issues such as reproductive disorders, 
+            developmental abnormalities, and an increased risk of cancers. Reducing exposure to EDCs by using safer, non-toxic alternatives is a 
+            proactive step towards protecting your health.
+        </p>
+    </div>
+
     <footer>
         <p>© 2024 EDC Free Solutions. All rights reserved. Made with dedication.<i class="fas fa-heart"></i></p>
     </footer>
 
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        // Function to smoothly scroll to a section when the link is clicked
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
